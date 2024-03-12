@@ -1,5 +1,4 @@
 import streamlit as st
-import csv
 from datetime import datetime
 
 #set the page config
@@ -7,13 +6,12 @@ st.set_page_config(layout='wide', initial_sidebar_state='expanded',page_title="d
     page_icon="🇩🇪")
 
     
-    
-csv_file_path = 'visits.csv'
 
-with open(csv_file_path, 'a', newline='') as file:
-    writer = csv.writer(file)
+
+with open('visits.csv', 'a+') as f:    #Append & read mode
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    writer.writerow([timestamp])    
+    f.write(f"{timestamp}\n")
+
     
 st.sidebar.header('MI4People')
 #st.subheader('Indicator')
