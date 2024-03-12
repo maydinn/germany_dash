@@ -11,7 +11,7 @@ st.set_page_config(layout='wide', initial_sidebar_state='expanded',page_title="d
 with open('visits.csv', 'a+') as f:    #Append & read mode
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     f.write(f"{timestamp}\n")
-
+    st.write(timestamp)
     
 st.sidebar.header('MI4People')
 #st.subheader('Indicator')
