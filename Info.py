@@ -22,8 +22,6 @@ st.sidebar.markdown('''
 Made with ❤️ 
 
 ''')
-import csv
-from datetime import datetime
 
 
 st.header("""
