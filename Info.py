@@ -40,4 +40,4 @@ with open('visits.csv', 'a+') as f:    #Append & read mode
     f.write(f"{timestamp}\n")
     #st.write(timestamp)
 data = pd.read_csv('visits.csv')
-st.metric("", '','','normal',  f'{timestamp}, {len(data)}')
+st.metric("", '','','normal',  f'{data.time.values[0]}, {len(data)}')
