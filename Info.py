@@ -1,6 +1,6 @@
 import streamlit as st
 from datetime import datetime
-
+import pandas as pd
 #set the page config
 st.set_page_config(layout='wide', initial_sidebar_state='expanded',page_title="dofe.mi4people",
     page_icon="🇩🇪")
@@ -38,5 +38,6 @@ In der heutigen global vernetzten Welt ist die Nutzung von Daten zu einem integr
 with open('visits.csv', 'a+') as f:    #Append & read mode
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     f.write(f"{timestamp}\n")
-    st.write(timestamp)
-st.metric("", timestamp,'','normal',  f'')
+    #st.write(timestamp)
+data = pd.read_csv('visits.csv')
+st.metric("", '','','normal',  f'{timestamp}, {len(data)}')
