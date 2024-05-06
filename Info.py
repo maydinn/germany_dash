@@ -12,7 +12,7 @@ st.sidebar.header('MI4People')
 #st.subheader('Indicator')
 
 
-link_text = "Für Impressum"
+link_text = "Impressum"
 
 # Define the URL you want to link to
 url = "https://de.mi4people.org/imprint"
