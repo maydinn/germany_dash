@@ -17,8 +17,6 @@ link_text = "Impressum"
 # Define the URL you want to link to
 url = "https://de.mi4people.org/imprint"
 
-# Write the string with the hyperlink using HTML markup
-st.write(f'<a href="{url}">{link_text}</a>', unsafe_allow_html=True)
 
 
 st.sidebar.markdown('''
